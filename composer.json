@@ -1,0 +1,42 @@
+{
+    "name": "coffin/coffin-modules",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "coffin's laughter",
+            "email": "chuanshuo_yongyuan@163.com"
+        }
+    ],
+    "type": "project",
+    "require": {
+        "php": "^8.2",
+        "ext-pdo": "*",
+        "ext-zip": "*",
+        "maatwebsite/excel": "^3.1",
+        "laravel/sanctum": "^4.0",
+        "laravel/prompts": "^0.3.5"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^v3.71.0",
+        "laravel/framework": "^v12.1.1"
+    },
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "Coffin\\": "src/"
+        }
+    },
+    "scripts": {
+        "pcf": "vendor/bin/php-cs-fixer fix --verbose --config=./.php-cs-fixer.php "
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Coffin\\Providers\\CoffinModulesServiceProvider"
+            ]
+        }
+    },
+    "prefer-stable": true
+}
