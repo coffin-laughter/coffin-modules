@@ -489,7 +489,7 @@ trait BaseOperate
      *
      * @return $this
      */
-    protected function setPaginate(bool $isPaginate = true): static
+    public function setPaginate(bool $isPaginate = true): static
     {
         $this->isPaginate = $isPaginate;
 
